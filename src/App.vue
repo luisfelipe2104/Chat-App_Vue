@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="view login">
+    <form class="login-form">
+      <div class="form-inner">
+        <h1>Login to Chat</h1>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your username">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+
+  <div class="view chat">
+    <h1>Chat View</h1>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { reactive, onMounted, ref } from 'vue';
+import db from './db.js'
 
 export default {
+  setup() {
+    return {
+
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
